@@ -4,14 +4,14 @@
 	id		= "com.alunny.amazing"
 	version 	= "1.0.0">
 
-	<name>alunnys Amazing App</name>
+	<name>Clinica UC San Carlos de Apoquindo</name>
 
 	<description>
-		An Amazing app by alunny
+		Aplicación móvil de la Clinica UC San Carlos de Apoquindo
 	</description>
 
-	<author href="http://alunny.github.com"
-		email="andrew.lunny@nitobi.com">
+	<author href="http://www.clinicaucsancarlos.cl"
+		email="movilapp@clinicaucsancarlos.cl">
 		Andrew Lunny
 	</author>
 
@@ -22,9 +22,9 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
-	<icon src="blurry.png" gap:role="default" />
+	<icon src="logo.png" gap:role="default" />
 
-    <gap:splash src="weirdo.png" />
+    <gap:splash src="splash.png" />
 
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
