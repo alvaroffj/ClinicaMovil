@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
-	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.clinicaucsca.agenda"
-	version 	= "1.0.0">
+	xmlns:gap	= "http://phonegap.com/ns/2.0.0"
+	id		= "com.clinicaucsca.portal"
+	version 	= "0.0.1">
 
 	<name>Clínica UC San Carlos de Apoquindo</name>
 
@@ -26,9 +26,13 @@
 
     <gap:splash src="splash.png" />
 
-	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
 	<!-- sample preference specification -->
-	<!-- <preference name="autorotate" value="false" readonly="true"/> -->
+	<preference name="autorotate" value="false" readonly="true"/>
+	<preference name="orientation" value="portrait" />
+	<preference name="stay-in-webview" value="true" />
+
+	<access origin="http://clinicaucsancarlos.cl" subdomains="true" />
 </widget>
