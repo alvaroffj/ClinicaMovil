@@ -4,10 +4,10 @@
 	id		= "com.clinicaucsca.agenda"
 	version 	= "1.0.0">
 
-	<name>Clinica UC San Carlos de Apoquindo</name>
+	<name>Clínica UC San Carlos de Apoquindo</name>
 
 	<description>
-		Aplicación móvil de la Clinica UC San Carlos de Apoquindo
+		Aplicación móvil de la Clínica UC San Carlos de Apoquindo
 	</description>
 
 	<author href="http://www.clinicaucsancarlos.cl"
