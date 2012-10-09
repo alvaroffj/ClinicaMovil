@@ -2,32 +2,21 @@
 <html>
 	<head>
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
-		<title>Training App</title>
+		<title>Clinica UC San Carlos de Apoquindo</title>
 		<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="screen" />
 		<link rel="stylesheet" href="assets/css/base.css" type="text/css" media="screen" />
 		
-		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		
-		<!-- // <script src="assets/js/xui.js" type="text/javascript" charset="utf-8"></script> -->
-		
-		<!-- // <script src="assets/js/lawnchair/adaptors/LawnchairAdaptorHelpers.js" type="text/javascript" charset="utf-8"></script> -->
-		
-		<!-- // <script src="assets/js/lawnchair/adaptors/DOMStorageAdaptor.js" type="text/javascript" charset="utf-8"></script> -->
-		
-		<!-- // <script src="assets/js/lawnchair/adaptors/WebkitSQLiteAdaptor.js" type="text/javascript" charset="utf-8"></script> -->
-		
-		<!-- // <script src="assets/js/lawnchair/Lawnchair.js" type="text/javascript" charset="utf-8"></script> -->
-		
-		<!-- // <script src="assets/js/dsl.js" type="text/javascript" charset="utf-8"></script> -->
+		<!-- // <script src="phonegap.js" type="text/javascript" charset="utf-8"></script> -->
 		
 		<script src="assets/js/jquery-1.7.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/js/jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/jquery.Rut.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/bootstrap.min-2.0.js" type="text/javascript" charset="utf-8"></script>
 		<script src="assets/js/todo.js" type="text/javascript" charset="utf-8"></script>
-		
 	</head>
 	<body>
-		<div class="navbar navbar-fixed-top">
+		<div class="navbar navbar-fixed-top hidden" id="navbar">
 			<div class="navbar-inner">
 				<a class="brand" href="#">Clinica UC SC</a>
 				<ul class="nav">
@@ -36,23 +25,100 @@
 				</ul>
 			</div>
 		</div>
-		<div class="container-fluid">
-		<div class="row-fluid">
-		<form class="form-vertical">
-			<div class="control-group">
-				<label class="control-label" for="txt"></label>
-				<div class="controls">
-					<input type="text" id="txt" name="txt" placeholder="" class="span12">
-				</div>
-			</div>
-			<div class="control-group">
-				<div class="controls">
-					<button type="button" id="btn" class="btn btn-primary btn-large span12"><i class="icon-download-alt icon-left"></i>CLick Aqui!</button>
-				</div>
-			</div>
-			<span class="label label-success pull-right" id="label">Texto</span>
-		</form>
-		</div>
-	</div>
+		<div class="container">
+            <div class="content-login">
+                <div class="page-header row-fluid">
+                    <div class="head">
+                        <div class="logo"><img src="assets/img/logo.png"/></div>
+                    </div>
+                </div>
+                <div class="row-fluid">
+	                <form class="form-vertical login" method="post" id="loginForm">
+	                    <div class="control-group">
+	                        <div class="controls">
+	                            <input type="text" name="user" id="user" class="required span12" placeholder="Rut"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <div class="controls">
+	                            <input type="password" name="pass" id="pass" class="required span12" placeholder="Contraseña"/>
+	                            <span class="help-block"><a href="#recPass" role="button" data-toggle="modal" class="pull-right">¿Olvid&oacute; su contrase&ntilde;a?</a></span>
+	                            <div class="clearfix"></div>
+	                        </div>
+	                    </div>
+	                    <div class="control-group" style="margin-top: 20px;">
+	                        <p class="feedback" id="msg"></p>
+	                        <button class="btn btn-primary btn-large btn-block" id="btn">Iniciar Sesión</button>
+	                        <a href="" id="linkReg" class="btn btn-block">Registrese</a>
+	                    </div>
+	                </form>
+	                <form method="post" action="/index.php?sec=log&do=reg" id="regForm" style="display: none;" class="form-horizontal span9">
+	                    <h2>Registro</h2>
+	                    <div class="control-group">
+	                        <label class="control-label" for="rut">Rut *:</label>
+	                        <div class="controls">
+	                            <input type="text" name="rut" id="rut" class="rut required span12"/>
+	                            <span class="help-block">Debe ser de la forma 11111111-1</span>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="user">Usuario *:</label>
+	                        <div class="controls">
+	                            <input type="text" name="user" id="user" class=" span12" readonly/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="pass">Contrase&ntilde;a *: </label>
+	                        <div class="controls">
+	                            <input type="password" name="pass" id="pass" class="required span12"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="nom">Nombres *:</label>
+	                        <div class="controls">
+	                            <input type="text" name="nom" id="nom" class="required span12"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="apep">Apellido Paterno *:</label>
+	                        <div class="controls">
+	                            <input type="text" name="apep" id="apep" class="required span12"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="apem">Apellido Materno:</label>
+	                        <div class="controls">
+	                            <input type="text" name="apem" id="apem" class=" span12"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="ema">Email *:</label>
+	                        <div class="controls">
+	                            <input type="text" name="ema" id="ema" class="email required span12"/>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="suc">Sucursal *:</label>
+	                        <div class="controls">
+	                            <?=getSelect($cp->getCSec()->suc, "NOM_SUCURSAL", "ID_SUCURSAL", "suc");?>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <label class="control-label" for="ofi">Oficina *:</label>
+	                        <div class="controls">
+	                            <?=getSelect($cp->getCSec()->ofi, "NOM_OFICINA", "ID_OFICINA", "ofi");?>
+	                        </div>
+	                    </div>
+	                    <div class="control-group">
+	                        <p class="feedback" id="msgReg">&nbsp;</p>
+	                        <div class="controls">
+	                            <input type="submit" class="btn btn-primary" id="btnReg" data-loading-text="Guardar" data-complete-text="Guardar" value="Guardar"/>
+	                            <a href="" id="linkLogin" style="font-size: 14px; margin-left: 5px;">Volver al Inicio</a>
+	                        </div>
+	                    </div>
+	                </form>
+	            </div>
+            </div>
+        </div>
 	</body>
 </html>

@@ -1,3 +1,151 @@
+body {
+/*	background-color: #527DAA;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(82, 125, 170, 1)), color-stop(100%, rgba(0,0,0, 0.01))), url(../img/ricepaper2.png),;
+	background-image: -webkit-linear-gradient(top, rgba(82, 125, 170, 1), rgba(0,0,0, 0.01)), url(../img/ricepaper2.png);
+	background-image: -moz-linear-gradient(top, rgba(82, 125, 170, 1), rgba(0,0,0, 0.01)), url(../img/ricepaper2.png);
+	background-image: -ms-linear-gradient(top, rgba(82, 125, 170, 1), rgba(0,0,0, 0.01)), url(../img/ricepaper2.png);
+	background-image: -o-linear-gradient(top, rgba(82, 125, 170, 1), rgba(0,0,0, 0.01)), url(../img/ricepaper2.png);
+	background-image: linear-gradient(top, rgba(82, 125, 170, 1), rgba(0,0,0, 0.01)), url(../img/ricepaper2.png);*/
+	background-color: #527daa; /* Old browsers */
+	background-image: url('../img/square_bg.png');
+}
+
+a {
+    color: #527DAA;
+    text-decoration: none;
+    line-height: inherit;
+    font-weight: inherit;
+}
+
+a:hover {
+    color: #FF9900;
+    text-decoration: none;
+}
+
+form {
+	margin: 0;
+}
+
 .icon-left {
 	margin-right: 5px;
+}
+
+.center {
+	text-align: center;
+}
+
+.container-fluid {
+	position: relative;
+}
+
+
+.loginBox {
+	background: #efefef;
+	padding: 10px;
+}
+
+.login .control-group {
+	margin-bottom: 10px;
+}
+
+.login .action {
+	margin-top: 5px;
+}
+
+.login input {
+	padding: 20px 15px;
+	margin-bottom: 0px;
+	margin-top: -2px;
+}
+
+.container {
+    
+}
+
+.content-login {
+    background-color: whitesmoke;
+    padding: 20px 20px 0px 20px;
+    margin: 0 -10px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    position: absolute;
+	height: 295px;
+	width: 414px;
+	left: 50%;
+	top: 50%;
+	margin-left: -227px;
+	margin-top: -157px;
+}
+
+.page-header {
+	padding: 15px 20px;
+	margin: -20px -20px 0px;
+    /*background: whitesmoke;*/
+    -webkit-border-radius: 6px 6px 0 0;
+    -moz-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+    border: none;
+}
+
+.page-header .logo {
+    margin: 0 auto;
+    width: 200px;
+}
+
+@media (max-width: 767px) {
+	
+    .modal.fade.in {
+        top: 10%;
+    }
+
+    .page-header {
+        margin: 0 0 0 -20px;
+    }
+
+    .page-header .logo {
+        margin: 0 auto;
+        width: 200px;
+    }
+
+    .content-login {
+    	padding: 0px 20px 20px 20px;
+        margin: 0 -15px;
+        height: 295px;
+		width: 414px;
+		left: 50%;
+		top: 50%;
+		margin-left: -227px;
+		margin-top: -157px;
+    }
+}
+
+@media (max-width: 480px) {
+	.content-login {
+    	padding: 0px 10px;
+        margin: 0 -15px;
+		height: 306px;
+		width: 250px;
+		margin-left: -135px;
+		margin-top: -153px;
+	}
+    .page-header .logo {
+        width: 200px;
+    }
+
+    .content {
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+    body {
+       background: url('../img/purty_wood_@2x.png') repeat fixed;
+    }
 }
