@@ -12,12 +12,14 @@ $(document).ready(function() {
                     if(!$btn.hasClass("disabled")) {
                         $btn.addClass("disabled");
                         $.ajax({
-                            url: "http://www.clinicaucsancarlos.cl/agendamientoSAP/index.php?sec=log&do=in",
-                            type: "post",
-                            dataType: "json",
+                            type: "POST",
                             data: $(form).serializeArray(),
+                            url: "http://www.clinicaucsancarlos.cl/agendamientoSAP/index.php?sec=log&do=in&callback=?",
+                            dataType: "json",
+                            // jsonp: "lala",
                             success: function(data) {
-                            	alert("ok");
+                            	alert(data.MENSAJE);
+                            	// console.log(data);
                                 // $msg.html(data.MENSAJE);
                                 // if(data.ERROR == 0) { //OK
                                 //     window.location.reload(true);
